@@ -42,6 +42,45 @@ public class Main {
             x++;
             System.out.println(x + " " +animal);
         }
+    //----------------------- HomeWork ------------------------------------------------------
+        System.out.println("----------------------------------------------------------------------------");
+        Cat catt = new Cat("Барсик",
+                new Owner("Сергей Валерьевич Иванов"),
+                LocalDate.of(2011,10,12),
+                new Illness("Болезнь"), 5D);
+        System.out.println(catt);
+        catt.toGo();
+        catt.fly();
+        catt.swim();
+
+        Dog dog = new Dog("Барбос",
+                new Owner("Иван Валерьевич"),
+                LocalDate.of(2015,1,25),
+                new Illness("Болят лапы"));
+        System.out.println(dog);
+        dog.toGo();
+        dog.fly();
+        dog.swim();
+
+        Bird duck = new Bird(
+                "Duckky",
+                new Owner("Петр Иванович"),
+                LocalDate.of(2012,5, 6),
+                new Illness("Болит крыло"));
+        System.out.println(duck);
+        duck.fly();
+        duck.swim();
+        duck.toGo();
+
+        Fish guppy = new Fish(
+                "Гуппи",
+                new Owner("Сергей Владимирович"),
+                LocalDate.of(2020,9,30),
+                new Illness("Поврежден плавник"));
+        System.out.println(guppy);
+        guppy.fly();
+        guppy.swim();
+        guppy.toGo();
     }
 
 }

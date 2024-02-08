@@ -1,5 +1,6 @@
 package main.clients;
 
+import java.sql.SQLOutput;
 import java.time.LocalDate;
 
 public class Animal {
@@ -60,10 +61,6 @@ public class Animal {
         System.out.println("Животное уснуло");
     }
 
-	private void toGo(){
-		System.out.println("Животное движется");
-	}
-	
     public String getType(){
         return getClass().getSimpleName();
     }
@@ -78,5 +75,17 @@ public class Animal {
     @Override
     public String toString() {
         return String.format("Кличка = %s, Дата рождения = %s, Хозяин = %s, Заболевание = %s", nickName,birthDate,owner,illness);
+    }
+    // -------------------- HomeWork ------------------------------------------------
+    public void toGo(){
+        System.out.println(String.format("%s движется", this.getType()));
+    }
+
+    public void fly(){
+        System.out.println(String.format("%s летит", this.getType()));
+    }
+
+    public void swim(){
+        System.out.println(String.format("%s плывет", this.getType()));
     }
 }
