@@ -60,6 +60,10 @@ public class Animal {
         System.out.println("Животное уснуло");
     }
 
+	private void toGo(){
+		System.out.println("Животное движется");
+	}
+	
     public String getType(){
         return getClass().getSimpleName();
     }
