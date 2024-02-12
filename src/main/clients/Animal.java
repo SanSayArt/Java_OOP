@@ -3,11 +3,12 @@ package main.clients;
 import java.sql.SQLOutput;
 import java.time.LocalDate;
 
-public class Animal {
+public abstract class Animal {
     protected final String nickName;   // final - поле задается при создании и больше нельзя поменять
     protected Owner owner;
     protected LocalDate birthDate;
     protected Illness illness;
+
 
     public String getNickName(){
         return this.nickName;
@@ -53,9 +54,7 @@ public class Animal {
         System.out.println("Животное охотится");
     }
 
-    private void eat(){
-        System.out.println("Животное ест");
-    }
+    public abstract void eat();
 
     private void sleep(){
         System.out.println("Животное уснуло");
@@ -77,9 +76,9 @@ public class Animal {
         return String.format("Кличка = %s, Дата рождения = %s, Хозяин = %s, Заболевание = %s", nickName,birthDate,owner,illness);
     }
     // -------------------- HomeWork ------------------------------------------------
-    public void toGo(){
-        System.out.println(String.format("%s движется", this.getType()));
-    }
+//    public void toGo(){
+//        System.out.println(String.format("%s движется", this.getType()));
+//    }
 
     public void fly(){
         System.out.println(String.format("%s летит", this.getType()));

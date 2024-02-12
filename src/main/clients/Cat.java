@@ -2,7 +2,7 @@ package main.clients;
 
 import java.time.LocalDate;
 
-public class Cat extends Animal{
+public class Cat extends Animal implements Goable, Huntable {
     // Todo в чем разница между Double и  double
     Double discount;
     public Cat(String nickName, Owner owner, LocalDate birthDate, Illness illness, Double discount) {
@@ -14,6 +14,11 @@ public class Cat extends Animal{
     public Cat(){
         super();
         this.discount =10D;
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("Кошечка поймала мышку и ест");
     }
 
     public Double getDiscount() {
@@ -40,5 +45,10 @@ public class Cat extends Animal{
     @Override
     public void swim() {
         System.out.println("Кошки не любят воду и не плавают.");
+    }
+
+    @Override
+    public void toGo() {
+        System.out.println("Животное " + nickName + " пошло.");
     }
 }
